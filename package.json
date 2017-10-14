@@ -1,0 +1,14 @@
+{
+  "name": "dummydata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dummy-data.js",
+  "scripts": {
+    "test": "node dummy-data.js"
+  },
+  "author": "Silvertech",
+  "license": "ISC",
+  "devDependencies": {
+    "lorem-ipsum": "^1.0.4"
+  }
+}
