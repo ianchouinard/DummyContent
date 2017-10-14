@@ -1,8 +1,6 @@
 
 const DummyDataConfig = {
     outputPath: "./data",
-    recompileExisting: false,
-    outputFormat: 'pug',
 	dataSets: [
 		{
 			name: "HomeCTAs",
