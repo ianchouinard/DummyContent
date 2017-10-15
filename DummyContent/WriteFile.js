@@ -1,5 +1,5 @@
 const fs = require('fs');
-const createData = require('./CreateData');
+const createObject = require('./CreateObject');
 const config = require('./../dummy-content-config.js');
 
 /**
@@ -15,7 +15,7 @@ const config = require('./../dummy-content-config.js');
  */
 const WriteFile = (input) => {
 
-    const data = createData(input),
+    const data = createObject(input),
           json = JSON.stringify(data, null, 4),
           directory = config.outputPath || '.';
 

@@ -3,21 +3,14 @@ const DummyDataConfig = {
     outputPath: "./data",
 	dataSets: [
 		{
-			name: "HomeCTAs",
-			items: 4,
-			schema: {
-				title: {units: "sentences", sentenceLowerBound: 1, sentenceUpperBound: 5},
-				body: {units: "paragraphs", paragraphLowerBound: 1, paragraphUpperBound: 1},
-				btnText: {units: "words"}
-			}
-		},
-		{
-			name: "Articles",
+			name: "Test",
 			items: 8,
 			schema: {
-				title: {units: "sentences", sentenceLowerBound: 4, sentenceUpperBound: 8},
-				author: {units: "sentences", sentenceLowerBound: 2, sentenceUpperBound: 2},
-				body: {units: "paragraphs", paragraphLowerBound: 4, paragraphUpperBound: 12, count: (Math.random() * 12) + 3}
+				title: {type: "string", stringType: "sentences", min: 4, max: 8},
+				author: {type: "string", stringType: "sentences", min: 2, max: 2},
+				public: {type: "boolean"},
+				num: {type: "integer", min: 0, max: 10000, round: true},
+				body: {type: "string", stringType: "paragraphs", min: 4, max: 12, count: (Math.random() * 12) + 3}
 			}
 		}
 	]
