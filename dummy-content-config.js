@@ -1,6 +1,6 @@
 
 const DummyDataConfig = {
-    outputPath: "./data",
+    outputPath: "./example-output",
 	dataSets: [
 		{
 			name: "Test",
