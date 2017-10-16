@@ -1,8 +1,8 @@
 # DummyContent JSON content generator
-A quick node program for generating dummy content JSON files for front end development/prototyping.
+A quick node program for generating dummy / placeholder content JSON files for front end development/prototyping.
 
 ## Info
-Currently, this can be used to generate JSON files with dummy content/data (see /example-output/ and DummyContentConfig.js for example usage). Useful for trying to get realistic and varying content for making front end prototypes.
+Currently, this can be used to generate JSON files for placeholder content & data (see /example-output/ and DummyContentConfig.js for example usage). Useful for trying to get realistic and varying content for making front end prototypes.
 
 Still a work in progress. Next on the to do list...
 1. Supported any amount of nested object arrays 
