@@ -2,7 +2,7 @@
 A quick node program for generating dummy content JSON files for front end development/prototyping
 
 ## Info
-Currently, this can be used to generate JSON files with dummy content/data. Useful for trying to get realistic and varying conent for making front end prototypes.
+Currently, this can be used to generate JSON files with dummy content/data. Useful for trying to get realistic and varying content for making front end prototypes.
 
 Still a work in progress. Next on the to do list...
 1. Supported any amount of nested object arrays 
@@ -28,10 +28,10 @@ const DummyDataConfig = {
 		items: 8,
 		schema: {
 		  title: {type: "string", stringType: "sentences", min: 4, max: 8},
-		  author: {type: "string", stringType: "sentences", min: 2, max: 2},
+		  author: {type: "string", stringType: "words"},
+		  body: {type: "string", stringType: "paragraphs", min: 4, max: 12, count: (Math.random() * 12) + 3},
 		  public: {type: "boolean"},
-		  num: {type: "integer", min: 0, max: 10000, round: true},
-		  body: {type: "string", stringType: "paragraphs", min: 4, max: 12, count: (Math.random() * 12) + 3}
+		  num: {type: "integer", min: 0, max: 10000, round: true}
 		}
 	  }
   ]
