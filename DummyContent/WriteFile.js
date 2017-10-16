@@ -1,6 +1,6 @@
 const fs = require('fs');
 const createObject = require('./CreateObject');
-const config = require('./../dummy-content-config.js');
+const config = require('./../DummyContentConfig.js');
 
 /**
  * Create object arrays from the CreateData method

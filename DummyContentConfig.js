@@ -1,5 +1,5 @@
 
-const DummyDataConfig = {
+const DummyContentConfig = {
     outputPath: "./example-output",
 	dataSets: [
 		{
@@ -16,4 +16,4 @@ const DummyDataConfig = {
 	]
 };
 
-module.exports = DummyDataConfig;
+module.exports = DummyContentConfig;

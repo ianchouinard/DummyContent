@@ -1,4 +1,4 @@
-const config = require('./dummy-content-config.js');
+const config = require('./DummyContentConfig.js');
 const writeFile = require('./DummyContent/WriteFile.js');
 
 for (let dataset of config.dataSets) {
