@@ -1,4 +1,3 @@
-const loremIpsum = require('lorem-ipsum');
 const config = require('./dummy-content-config.js');
 const writeFile = require('./DummyContent/WriteFile.js');
 
