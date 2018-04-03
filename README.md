@@ -1,9 +1,6 @@
 # DummyContent JSON content generator
 A quick node program for generating dummy / placeholder content JSON files for front end development/prototyping.
 
-### Note from author 
-I used to use this for my own dev until I found other solutions on github that have more options and features than my own. I'm keeping this repo own for reference though.
-
 ## Info
 Currently, this can be used to generate JSON files for placeholder content & data (see /example-output/ and DummyContentConfig.js for example usage). Useful for trying to get realistic and varying content for making front end prototypes.
 
