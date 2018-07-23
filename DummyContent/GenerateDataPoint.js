@@ -26,6 +26,10 @@ class GenerateDataPoint {
                 data = this.booleanGen();
                 break;
 
+            case 'image':
+                data = this.imageSrcGen(params);
+                break;
+
             default:
                 console.error(`Invalid type "${params.type}"`);
                 return;
@@ -117,6 +121,31 @@ class GenerateDataPoint {
      */
     static booleanGen() {
         return (Math.floor(Math.random() * 2) == 0);
+    }
+
+    /**
+     * Generates the image src code between a set x/y size
+     * using the free placeholder image service placeholder.com
+     * @param {Object} params 
+     *      possible props...
+     *      {
+     *          xMin: {Integer},
+     *          xMax: {Integer},
+     *          yMin: {Integer},
+     *          yMax: {Integer}
+     *      }
+     * @returns {String}
+     */
+    static imageSrcGen(params) {
+        const base = 'http://via.placeholder.com';
+
+        const xRange =  [(params.xMin || 1), (params.xMax || 999)];
+        const yRange =  [(params.yMin || 1), (params.yMax || 999)];
+
+        const x = Math.ceil((Math.random() * xRange[1]) + xRange[0]);
+        const y = Math.ceil((Math.random() * yRange[1]) + yRange[0]);
+
+        return `${base}/${x}x${y}`;
     }
 
 }

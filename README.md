@@ -31,7 +31,8 @@ const DummyDataConfig = {
 		  author: {type: "string", stringType: "words"},
 		  body: {type: "string", stringType: "paragraphs", min: 4, max: 12, count: (Math.random() * 12) + 3},
 		  public: {type: "boolean"},
-		  num: {type: "integer", min: 0, max: 10000, round: true}
+		  num: {type: "integer", min: 0, max: 10000, round: true},
+		  heroImage: {type: "image", xMin: 800, xMax: 1200, yMin: 400, yMax: 600}
 		}
 	  }
   ]
@@ -67,3 +68,11 @@ const DummyDataConfig = {
 | round         | Boolean     | Set to true if number should be rounded. |
 #### type: "boolean"
 No settings for this property type.
+#### type: "image"
+Note, this uses the free image service at [placeholder.com](https://placeholder.com/) (No association to me or this project)
+| Property      | Type        | Description  |
+| ------------- |-------------| -------------|
+| xMin          | Integer     | Min Y dimension. |
+| xMax          | Integer     | Max Y dimension |
+| yMin          | Integer     | Min Y dimension. |
+| yMax          | Integer     | Max Y dimension |

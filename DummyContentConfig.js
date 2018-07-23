@@ -10,7 +10,8 @@ const DummyContentConfig = {
 				author: {type: "string", stringType: "sentences", min: 2, max: 2},
 				public: {type: "boolean"},
 				num: {type: "integer", min: 0, max: 10000, round: true},
-				body: {type: "string", stringType: "paragraphs", min: 4, max: 12, count: (Math.random() * 12) + 3}
+				body: {type: "string", stringType: "paragraphs", min: 4, max: 12, count: (Math.random() * 12) + 3},
+				heroImage: {type: "image", xMin: 200, xMax: 300, yMin: 100, yMax: 400}
 			}
 		}
 	]
