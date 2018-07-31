@@ -85,7 +85,10 @@ Note, this uses the free image service at [placeholder.com](https://placeholder.
 | to            | Date        | Get random date up to this date. |
 | locale        | String      | Localization string. If provided, date will be returned in a localized mm/dd/yyyy format. Ex. use "en-US" for us english |
 #### type: "coordinates"
-Returns a latitude and longitude in an array. [latitude, longitude]
+Returns a latitude and longitude in an array. 
+``` javascript
+[latitude, longitude]
+```
 | Property      | Type        | Description  |
 | ------------- |-------------| -------------|
 | latMin        | Integer     | Minimun latitide. (-90 to 90) |
