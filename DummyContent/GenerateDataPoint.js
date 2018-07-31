@@ -34,6 +34,10 @@ class GenerateDataPoint {
                 data = this.dateGen(params);
                 break;
 
+            case 'coordinates':
+                data = this.coordinatesGen(params);
+                break;
+
             default:
                 console.error(`Invalid type "${params.type}"`);
                 return;
@@ -180,6 +184,46 @@ class GenerateDataPoint {
         }
 
         return date;
+    }
+
+    /**
+     * Generates a set of latitude and longitude
+     * @param {Object} params
+     *      possible props...
+     *      {
+     *          latMin: {Number (-90 to 90)},
+     *          latMax: {Number (-90 to 90)},
+     *          lonMin: {Number (-180 to 180)}
+     *          lonMax: {Number (-180 to 180)}
+     *      }
+     * @returns {Array<number>} [lat, lon] 
+     */
+    static coordinatesGen(params) {
+        const latitutde = [-90, 90];
+        const longitude = [-180, 180];
+
+        // Validate that the params are within range
+        // And set correct it, or set the min/max as defaults.
+        if (params.latMin < latitutde[0] || !params.latMin) {
+            params.latMin = latitutde[0];
+        }
+
+        if (params.latMax > latitutde[1] || !params.latMax) {
+            params.latMax = latitutde[1];
+        }
+
+        if (params.lonMin < longitude[0] || !params.lonMin) {
+            params.lonMin = longitude[0];
+        }
+
+        if (params.lonMax > longitude[1] || !params.lonMax) {
+            params.lonMax = longitude[1];
+        }
+
+        const lat = ((Math.random() * params.latMax) + params.latMin).toFixed(6);
+        const lon = ((Math.random() * params.lonMax) + params.lonMin).toFixed(6);
+        
+        return [lat, lon];
     }
 
 }
