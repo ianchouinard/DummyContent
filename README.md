@@ -32,7 +32,8 @@ const DummyDataConfig = {
 		  body: {type: "string", stringType: "paragraphs", min: 4, max: 12, count: (Math.random() * 12) + 3},
 		  public: {type: "boolean"},
 		  num: {type: "integer", min: 0, max: 10000, round: true},
-		  heroImage: {type: "image", xMin: 800, xMax: 1200, yMin: 400, yMax: 600}
+		  heroImage: {type: "image", xMin: 800, xMax: 1200, yMin: 400, yMax: 600},
+		  dateCreated: {type: 'date', from: new Date('December 17, 2007'), to: new Date('December 17, 2018'), locale: 'en-US'}
 		}
 	  }
   ]
@@ -76,3 +77,9 @@ Note, this uses the free image service at [placeholder.com](https://placeholder.
 | xMax          | Integer     | Max Y dimension |
 | yMin          | Integer     | Min Y dimension. |
 | yMax          | Integer     | Max Y dimension |
+#### type: "date"
+| Property      | Type        | Description  |
+| ------------- |-------------| -------------|
+| from          | Date        | Get random date from this date. |
+| to            | Date        | Get random date up to this date. |
+| locale        | String      | Localization string. If provided, date will be returned in a localized mm/dd/yyyy format. Ex. use "en-US" for us english |

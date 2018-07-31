@@ -30,6 +30,10 @@ class GenerateDataPoint {
                 data = this.imageSrcGen(params);
                 break;
 
+            case 'date':
+                data = this.dateGen(params);
+                break;
+
             default:
                 console.error(`Invalid type "${params.type}"`);
                 return;
@@ -146,6 +150,36 @@ class GenerateDataPoint {
         const y = Math.ceil((Math.random() * yRange[1]) + yRange[0]);
 
         return `${base}/${x}x${y}`;
+    }
+
+    /**
+     * Generates a date in the m/dd/yy format
+     * If the to and from params are empty, todays date will be used.
+     * If locale is empty, a normal date object is returned.
+     * @param {Object} params
+     *      possible props...
+     *      {
+     *          from: {Date},
+     *          to: {Date},
+     *          locale: {String}
+     *      }
+     * @returns {String}
+     */
+    static dateGen(params) {
+        let date;
+
+        if (!params.from || !params.to) {
+            date = new Date();
+        } else {
+            date = new Date(params.from.getTime() + Math.random() 
+                    * (params.to.getTime() - params.from.getTime()));
+        }
+
+        if (params.locale && params.locale != '') {
+            date = date.toLocaleDateString(params.locale);
+        }
+
+        return date;
     }
 
 }
